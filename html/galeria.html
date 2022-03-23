@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping Paimon</title>
+    <link rel="stylesheet" href="../css/estilos-galeria.css">
+    <link rel="shortcut icon" href="../imagenes/camp.png" type="image/ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header x-data="{ open: false }" class="header">
+        <div class="header__logo">
+          CAMPING PAIMON
+        </div>
+        <button class="header__button-nav--open" x-on:click="open = true">Abrir</button>
+        <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+          <div class="nav__button" x-on:click="open = false">
+            <button class="header__button-nav--close">Cerrar</button>
+          </div>
+          <ul class="nav__ul">
+            <li class="nav__item"><a href="../Html/inicio.html" class="nav__link">Inicio</a></li>
+            <li class="nav__item"><a href="../Html/galeria.html" class="nav__link">Galeria</a></li>
+            <li class="nav__item"><a href="../Html/precios.html" class="nav__link">Precios</a></li>
+            <li class="nav__item"><a href="../Html/haceReserva.html" class="nav__link">Hacer Reserva</a></li>
+          </ul>
+        </nav>
+      </header>
+    <section>
+        <h1>GALERIA</h1>
+        <article>
+            <div class="hab">HABITACIONES</div>
+            <div class="habitaciones">Disponemos de diferentes tipos de habitacion en las cabaña, esta tiene un pequeño salon, uno o dos baños dependiendo de las personas que la alquilen y una pequeña cocina. Tambien disponemos de un servicio de limpieza gratuito y cerca del camping hay un mercado con todo lo necesario para los campistas. El servicio de limpieza pasara dos veces por semana pero en la recepcion pueden elegir los dias o si quieren prescindir de este servicio. Disponemos tambien de cunas o sillas de bebes por si lo precisan.</div>
+            <div class="slider">
+                <ul>
+                    <li class="gal">
+                        <img src="../imagenes/hab1.jpg" alt="">
+                    </li>
+                    <li class="gal">
+                        <img src="../imagenes/hab2.jpg" alt="">
+                    </li>
+                    <li class="gal">
+                        <img src="../imagenes/hab3.jpg" alt="">
+                    </li>
+                    <li class="gal">
+                        <img src="../imagenes/hab4.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article>
+            <div class="acts">ACTIVIDADES</div>
+            <div class="actividades">Ofrecemos varias actividades en nuestro camping, como puede ser el tiro con arco, carreras de saco, escalda, etc. Tambien para los mas pequeños tenemos unas instalaciones para que puedan escalar por los arboles, todo con unas estrictas medidas de seguridad. Cada viernes se organiza una caminata hasta lo alto de la montaña donde acamparemos durante una noche, donde tendremos una hoguera para la cena. Nuestras instalaciones son bastante amplias por lo que han caminos de senderismo sin guias para los mas aventureros. Los domingos ofrecemos una excursion a una granja de caballos cerca del camping donde podran disfrutar de un paseo en caballo y un dia de cuidados de los mismo.</div>
+            <div class="act">
+                    <div>
+                        <img src="../imagenes/act1.jpg" class="a">
+                    </div>
+                    <div>
+                        <img src="../imagenes/act2.jpg" class="a">
+                    </div>
+                    <div>
+                        <img src="../imagenes/act4.jpg" class="a">
+                    </div>
+                    <div>
+                        <img src="../imagenes/act5.jpg" class="a">
+                    </div>
+                    <div class="clear"></div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2022</p>
+        <a href="#"><img class="footer-social" src="../imagenes/facebook.png" alt="Facebook"></a>
+		<a href="#"><img class="footer-social" src="../imagenes/twitter.png" alt="Twitter"></a>
+		<a href="#"><img class="footer-social" src="../imagenes/instagram.png" alt="Instagram"></a>
+        <div class="clear"></div>
+    </footer>
+</body>
+</html>
