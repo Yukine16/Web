@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping Paimon</title>
+    <link rel="stylesheet" href="../css/estilos-reserva.css">
+    <link rel="shortcut icon" href="../imagenes/camp.png" type="image/ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    
+<header x-data="{ open: false }" class="header">
+  <div class="header__logo">
+    CAMPING PAIMON
+  </div>
+  <button class="header__button-nav--open" x-on:click="open = true">Abrir</button>
+  <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+    <div class="nav__button" x-on:click="open = false">
+      <button class="header__button-nav--close">Cerrar</button>
+    </div>
+    <ul class="nav__ul">
+      <li class="nav__item"><a href="../Html/inicio.html" class="nav__link">Inicio</a></li>
+      <li class="nav__item"><a href="../Html/galeria.html" class="nav__link">Galeria</a></li>
+      <li class="nav__item"><a href="../Html/precios.html" class="nav__link">Precios</a></li>
+      <li class="nav__item"><a href="../Html/haceReserva.html" class="nav__link">Hacer Reserva</a></li>
+    </ul>
+  </nav>
+</header>
+    <section>
+        <h1>Hacer Reserva</h1>
+        <form action="contactar.php" method="post">
+            <fieldset>
+                <legend>Informacion</legend>
+                Nombre: 
+                <input type="text" name="nombre" required/><acronym title="campo obligatorio">*</acronym>
+                <br/>
+                Telefono:
+                <input type="number" name="Telefono" maxlength="9" required/><acronym title="campo obligatorio">*</acronym>
+                <br/>
+                Email
+                <input type="email" name="correo" pattern=".+@gmail\.com" size="30" required/><acronym title="campo obligatorio">*</acronym>
+                <br/>
+                DNI:
+                <input type="text" name="dni" value="" size="10" maxlength="9" required/><acronym title="campo obligatorio">*</acronym>
+                <br/>
+            </fieldset>
+            <fieldset>
+                <legend>Reserva</legend>
+                Numero de habitaciones: 
+                <input type="number" name="habitaciones" step="1" min="1" max="4" required/><acronym title="campo obligatorio">*</acronym>
+                <br/>
+                Dias:
+                <input type="number" name="dias" step="1" min="1" max="92" required/><acronym title="campo obligatorio">*</acronym>
+                <br/>
+                <label for="so">Mood de Pago</label> <br/>
+                    <select id="so" name="so">
+                    <option value="" selected="selected">- selecciona -</option>
+                    <option value="bizum">Bizum</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="Visa">Visa</option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <label for="mensaje">Mas información</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+            </fieldset>
+            <br/>
+            <input name="condiciones" type="checkbox" value="condiciones" checked/>He leido las condiciones..
+            <br/>
+            <input type="reset" name="borrar" value="Limpiar"/>
+            <input type="submit" value="Enviar">
+        </form>
+        <article>
+                <div class="background">
+                    <div class="red"></div>
+                </div>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2022</p>
+        <a href="#"><img class="footer-social" src="../imagenes/facebook.png" alt="Facebook"></a>
+		    <a href="#"><img class="footer-social" src="../imagenes/twitter.png" alt="Twitter"></a>
+		    <a href="#"><img class="footer-social" src="../imagenes/instagram.png" alt="Instagram"></a>
+        <div class="clear"></div>
+    </footer>
+</body>
+</html>
